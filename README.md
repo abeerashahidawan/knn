@@ -10,7 +10,7 @@ This project involves designing and implementing a K-Nearest Neighbors (K-N-N) c
    - Design an RTL diagram for the K-N-N algorithm.
    - **Requirements:**
      - Data points and the unknown entry (X) are 2D, with each datapoint being 8 bits wide.
-     - Distance is calculated using the City Block Distance formula: \( \text{Distance} = |x_2 - x_1| + |y_2 - y_1| \).
+     - Distance is calculated using the City Block Distance formula: ({Distance} = |x_2 - x_1| + |y_2 - y_1|).
      - The system processes 128 known data points with labels ranging from 0 to 3.
      - The K value is 5.
 
