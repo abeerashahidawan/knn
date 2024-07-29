@@ -19,7 +19,7 @@ This project involves designing and implementing a K-Nearest Neighbors (K-N-N) c
    - Create a testbench to validate the functionality of the code.
 
 3. **Timing and Utilization Summary:**
-   - Once the code is approved, provide a summary of timing and resource utilization using Xilinx tools.
+   - Provide a summary of timing and resource utilization using Xilinx tools.
 
 4. **FPGA Implementation:**
    - Run the synthesizable code on a Spartan 6 FPGA.
