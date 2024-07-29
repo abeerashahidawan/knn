@@ -7,12 +7,12 @@ This project involves designing and implementing a K-Nearest Neighbors (K-N-N) c
 ### Tasks
 
 1. **Present an RTL Diagram:**
-   - Design an RTL diagram that illustrates the working of the K-N-N algorithm.
+   - Design an RTL diagram for the K-N-N algorithm.
    - **Requirements:**
-     - Data points and the unknown entry (X) are 2D, with each datapoint being 8-bit wide.
-     - Distance is computed using the City Block Distance formula: \( \text{Distance} = |x_2 - x_1| + |y_2 - y_1| \)
-     - The system processes N-known data points with labels ranging from 0 to 3.
-     - Specify bus width, memory (depth, address lines), and design type (FDA, TSA, Pipelined, etc.).
+     - Data points and the unknown entry (X) are 2D, with each datapoint being 8 bits wide.
+     - Distance is calculated using the City Block Distance formula: \( \text{Distance} = |x_2 - x_1| + |y_2 - y_1| \).
+     - The system processes 128 known data points with labels ranging from 0 to 3.
+     - The K value is 5.
 
 2. **Write Synthesizable RTL Verilog Code:**
    - Develop the Verilog code for the designed RTL diagram.
@@ -22,32 +22,18 @@ This project involves designing and implementing a K-Nearest Neighbors (K-N-N) c
    - Once the code is approved, provide a summary of timing and resource utilization using Xilinx tools.
 
 4. **FPGA Implementation:**
-   - Run the synthesizable code on a Spartan 6 FPGA (details to be shared later).
+   - Run the synthesizable code on a Spartan 6 FPGA.
 
 ## Files
 
-- **Project-1 (FPGA Stream).pdf**: Contains the project problem statement and detailed requirements.
-- **KNN.v**: The Verilog code for the K-N-N classifier.
+- **project_Statement.pdf**: Detailed project problem statement and requirements.
+- **KNN.v**: Verilog code for the K-N-N classifier.
+- **knn_topModule.v**: Top module for the K-N-N classifier, including a slowed clock for FPGA.
+- **knn_tb.v**: Testbench for verifying functionality.
+- **dataset.txt**: Contains 128 labeled data points.
+- **knn_controlUnit.v**: Control unit with a 3-state FSM to manage flow:
+  - State 1: Calculate distances for 128 data points and maintain K sorted minimum distances.
+  - State 2: Count label frequency for each label.
+  - State 3: Perform majority voting to determine the label for the unknown data point.
 
 ## Instructions
-
-1. **Setup:**
-   - Ensure you have Xilinx tools installed for synthesis and implementation.
-   - Prepare your FPGA environment (Spartan 6).
-
-2. **Design Verification:**
-   - Review the RTL diagram to ensure it meets all specified requirements.
-   - Verify the Verilog code through simulation using the provided testbench.
-
-3. **Synthesis and Implementation:**
-   - Use Xilinx tools to synthesize the Verilog code.
-   - Generate the timing and utilization summary.
-   - Implement the design on the Spartan 6 FPGA and validate its functionality.
-
-## Contact
-
-For any queries or assistance, please reach out to your project supervisor or the RISETech Internship coordinator.
-
----
-
-You can modify this draft based on any additional details or specific instructions you might have.
