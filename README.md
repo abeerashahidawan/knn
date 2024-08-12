@@ -36,4 +36,3 @@ This project involves designing and implementing a K-Nearest Neighbors (K-N-N) c
   - State 2: Count label frequency for each label.
   - State 3: Perform majority voting to determine the label for the unknown data point.
 
-## Instructions
